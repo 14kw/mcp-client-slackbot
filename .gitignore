@@ -185,3 +185,19 @@ htmlcov/
 # OS specific
 .DS_Store
 Thumbs.db
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+terraform.rc
+.terraformrc
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
