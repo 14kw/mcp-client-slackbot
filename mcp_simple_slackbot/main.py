@@ -712,6 +712,19 @@ async def main() -> None:
         )
 
     server_config = config.load_config("servers_config.json")
+    
+    # Update SQLite database path from environment variable if set
+    db_path = os.getenv("DB_PATH", "./test.db")
+    for name, srv_config in server_config["mcpServers"].items():
+        if name == "sqlite" and "args" in srv_config:
+            # Find and replace the db-path argument
+            args = srv_config["args"]
+            for i, arg in enumerate(args):
+                if arg == "--db-path" and i + 1 < len(args):
+                    args[i + 1] = db_path
+                    logging.info(f"Using database path: {db_path}")
+                    break
+    
     servers = [
         Server(name, srv_config)
         for name, srv_config in server_config["mcpServers"].items()

@@ -60,6 +60,8 @@ LLM_MODEL=gpt-4-turbo
 
 ## Running the Bot
 
+### Local Development
+
 ```bash
 # Navigate to the module directory
 cd mcp_simple_slackbot
@@ -73,6 +75,10 @@ The bot will:
 2. Discover available tools
 3. Start the Slack app in Socket Mode
 4. Listen for mentions and direct messages
+
+### Production Deployment
+
+For deploying to Google Cloud Platform with persistent database storage, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Usage
 

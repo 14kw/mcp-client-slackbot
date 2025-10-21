@@ -1,0 +1,34 @@
+# Google Cloud Configuration
+project_id = "your-gcp-project-id"
+region     = "asia-northeast1"
+app_name   = "mcp-slackbot"
+
+# Docker Image
+# After building and pushing your image, update this value
+# Format: REGION-docker.pkg.dev/PROJECT_ID/REPO_NAME/IMAGE_NAME:TAG
+container_image = "asia-northeast1-docker.pkg.dev/your-gcp-project-id/mcp-slackbot-repo/mcp-slackbot:latest"
+
+# Slack Configuration
+slack_bot_token = "xoxb-your-bot-token"
+slack_app_token = "xapp-your-app-token"
+
+# LLM API Keys (provide at least one)
+openai_api_key    = "sk-your-openai-key"
+# groq_api_key      = "gsk-your-groq-key"
+# anthropic_api_key = "your-anthropic-key"
+
+# LLM Model Configuration
+llm_model = "gpt-4o-mini"
+
+# Database Configuration
+db_sync_interval = "300"  # Sync every 5 minutes
+
+# Cloud Run Configuration
+cloud_run_cpu    = "1"
+cloud_run_memory = "512Mi"
+min_instances    = 1
+max_instances    = 3
+
+# Access Control
+# Set to false for production to require authentication
+allow_unauthenticated = true
