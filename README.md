@@ -58,7 +58,7 @@ OPENAI_API_KEY=sk-your-openai-key
 LLM_MODEL=gpt-4-turbo
 
 # Optional: Notion API credentials (for Notion MCP server)
-# NOTION_API_KEY=secret_your-notion-integration-token
+# NOTION_TOKEN=ntn_your-notion-integration-token
 ```
 
 ## Running the Bot
